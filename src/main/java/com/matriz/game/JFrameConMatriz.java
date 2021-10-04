@@ -1,4 +1,4 @@
-package com.matriz.game;
+package main.java.com.matriz.game;
 
 import javax.swing.JFrame;
 
@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 public class JFrameConMatriz extends JFrame {
     //Esto es el Componente de mayor Orden GridLayout donde le pasamos
     //Este JFrame y el numero de columnas y filas
-    private MatrizMaker matrizMaker = new MatrizMaker(this, 10, 10);
+    private main.java.com.matriz.game.MatrizMaker matrizMaker = new main.java.com.matriz.game.MatrizMaker(this, 10, 10);
 
     public JFrameConMatriz() {
         super.setTitle("Matriz v1.0");

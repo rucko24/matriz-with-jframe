@@ -1,4 +1,4 @@
-package com.matriz.game;
+package main.java.com.matriz.game;
 
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;

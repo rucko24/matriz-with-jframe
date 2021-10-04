@@ -15,7 +15,6 @@ import java.awt.GridLayout;
 /**
  * Make a GridLayout
  */
-@Slf4j
 public class MatrizMaker extends GridLayout {
     private final JFrame jFrame;
     private final int filas;

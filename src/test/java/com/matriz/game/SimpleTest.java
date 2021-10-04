@@ -1,10 +1,8 @@
 package com.matriz.game;
 
-import org.assertj.core.api.Assert;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import javax.swing.JFrame;
 
 import java.awt.LayoutManager;
 

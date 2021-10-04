@@ -3,56 +3,55 @@ package com.matriz.game;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.swing.BorderFactory;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.BevelBorder;
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.GridLayout;
 
 /**
  * Make a GridLayout
  */
-public class MatrizMaker extends GridLayout {
-    private final JFrame jFrame;
+@Slf4j
+public class MatrizMaker extends JPanel {
     private final int filas;
     private final int columnas;
+    private GridLayout gridLayout;
 
-    public MatrizMaker(final JFrame jFrame, final int filas, final int columnas) {
-        super(filas, columnas);
-        this.filas = filas;
+    public MatrizMaker(final int columnas) {
+        this.filas = columnas; // mismo numero de las columnas
         this.columnas = columnas;
-        this.jFrame = jFrame;
+        this.gridLayout = new GridLayout(filas, columnas);
+        //Set de GridLayout to JPanel
+        super.setLayout(gridLayout);
 
-        this.matriz();
-    }
-
-    private void matriz() {
-        fillMatriz();
+        this.fillMatriz();
     }
 
     private void fillMatriz() {
         int count = 1;
         for(int f=0; f<filas; f++) {
             for(int c=0; c<columnas; c++) {
-                JPanel panel = centerJLabel(new JLabel(String.valueOf(count++)));
+                final JPanel panel = centerJLabel(new JLabel(String.valueOf(count++)));
                 if(f % 2 == 0) {
                     //Add example background color
                     panel.setBackground(Color.blue);
                 }
-                this.jFrame.add(panel);
+                super.add(panel);
             }
         }
     }
 
-    private JPanel centerJLabel(final JLabel jLabel) {
+    public static JPanel centerJLabel(final JLabel jLabel) {
         final JPanel panel = new JPanel(new BorderLayout());
         panel.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
         //Para centrar el JLabel dentro del JPanel
         jLabel.setHorizontalAlignment(SwingConstants.CENTER);
         panel.add(jLabel, BorderLayout.CENTER);
+        panel.setPreferredSize(new Dimension(45, 60));
         return panel;
     }
 

@@ -1,4 +1,6 @@
-package main.java.com.matriz.game;
+package com.matriz.game;
+
+import lombok.extern.slf4j.Slf4j;
 
 import javax.swing.JFrame;
 
@@ -8,7 +10,7 @@ import javax.swing.JFrame;
 public class JFrameConMatriz extends JFrame {
     //Esto es el Componente de mayor Orden GridLayout donde le pasamos
     //Este JFrame y el numero de columnas y filas
-    private main.java.com.matriz.game.MatrizMaker matrizMaker = new main.java.com.matriz.game.MatrizMaker(this, 10, 10);
+    private MatrizMaker matrizMaker = new MatrizMaker(this, 10, 10);
 
     public JFrameConMatriz() {
         super.setTitle("Matriz v1.0");

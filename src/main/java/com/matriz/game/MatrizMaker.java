@@ -1,4 +1,6 @@
-package main.java.com.matriz.game;
+package com.matriz.game;
+
+import lombok.extern.slf4j.Slf4j;
 
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
@@ -13,10 +15,11 @@ import java.awt.GridLayout;
 /**
  * Make a GridLayout
  */
+@Slf4j
 public class MatrizMaker extends GridLayout {
     private final JFrame jFrame;
-    private int filas;
-    private int columnas;
+    private final int filas;
+    private final int columnas;
 
     public MatrizMaker(final JFrame jFrame, final int filas, final int columnas) {
         super(filas, columnas);

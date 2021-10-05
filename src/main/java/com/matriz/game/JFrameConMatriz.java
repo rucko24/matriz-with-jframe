@@ -10,7 +10,7 @@ import java.awt.BorderLayout;
 public class JFrameConMatriz extends JFrame {
     //Esto es el Componente de mayor Orden GridLayout donde le pasamos
     //Este JFrame y el numero de columnas y filas
-    private MatrizMaker matrizMaker = new MatrizMaker( 10);
+    private final MatrizMaker matrizMaker = new MatrizMaker( 10);
     private final ControlHorizontalJPanel control = new ControlHorizontalJPanel();
 
     public JFrameConMatriz() {

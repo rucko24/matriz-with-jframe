@@ -49,19 +49,19 @@ public class MatrizMaker extends JPanel {
                 final JPanel panel = centerJLabel(jLabel);
                 if(f == 1) {
                    jLabel.setText(String.valueOf(count2--));
-                    panel.setBackground(Color.blue);
+                    panel.setBackground(Color.lightGray.brighter());
                 } else if(f == 3) {
                     jLabel.setText(String.valueOf(count3--));
-                    panel.setBackground(Color.blue);
+                    panel.setBackground(Color.lightGray.brighter());
                 } else if(f == 5) {
                     jLabel.setText(String.valueOf(count4--));
-                    panel.setBackground(Color.blue);
+                    panel.setBackground(Color.lightGray.brighter());
                 } else if(f == 7) {
                     jLabel.setText(String.valueOf(count5--));
-                    panel.setBackground(Color.blue);
+                    panel.setBackground(Color.lightGray.brighter());
                 } else if(f == 9) {
                     jLabel.setText(String.valueOf(count6--));
-                    panel.setBackground(Color.blue);
+                    panel.setBackground(Color.lightGray.brighter());
                 }
                 super.add(panel, c);
             }
